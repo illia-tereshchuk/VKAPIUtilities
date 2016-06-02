@@ -1,0 +1,55 @@
+﻿<Window x:Class="VKAPIUtilities.VKAPIAdapterUsageExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VKAPIUtilities.VKAPIAdapterUsageExample"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Loaded="Window_Loaded"
+        Title="Тест адаптера VK API" Height="290" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <ProgressBar
+            Name="progressBar"
+            Minimum="0"
+            Maximum="100"
+            Grid.Row="0"
+            Margin="2"/>
+
+        <Button
+            Name="buttonGetHabrSubscribers"
+            Click="buttonGetHabrSubscribers_Click"
+            Content="30 000 подписчиков vk.com/habr в CSV"
+            Grid.Row="1"
+            Margin="2"/>
+
+        <Button 
+            Name="buttonGetBoomburumFriends"
+            Click="buttonGetBoomburumFriends_Click"
+            Content="Список друзей Алексея Шевелёва в CSV"
+            Grid.Row="2"
+            Margin="2"/>
+
+        <Button 
+            Name="buttonGetOnlineUsersMoscow"
+            Click="buttonGetOnlineUsersMoscow_Click"
+            Content="1000 пользователей из Москвы онлайн в CSV"
+            Grid.Row="3"
+            Margin="2"/>
+        
+        <Button 
+            Name="buttonGetHabrSubscribersCount"
+            Click="buttonGetHabrSubscribersCount_Click"
+            Content="Общее количество подписчиков vk.com/habr"
+            Grid.Row="4"
+            Margin="2"/>
+    </Grid>
+</Window>

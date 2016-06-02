@@ -1,0 +1,19 @@
+﻿<Window x:Class="VKAPIUtilities.VKAPIAdapter.Authorization.VKAPIAuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        ResizeMode="CanMinimize"
+        Loaded="Window_Loaded"
+        SizeToContent="WidthAndHeight"
+        WindowState="Minimized"
+        Icon="pack://application:,,,/VKAPIUtilities.VKAPIAdapter;component/Resources/Icons/vk.png">
+    <!-- Пространства имён wf и wfi требуют включения в проект библиотек Windows Forms -->
+    <Grid>
+        <wfi:WindowsFormsHost>
+            <wf:WebBrowser
+                x:Name="webBrowser"
+                ScrollBarsEnabled="False" />
+        </wfi:WindowsFormsHost>
+    </Grid>
+</Window>
